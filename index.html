@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hardware Store</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .background {
+      position: fixed; /* Make it fixed to cover the entire viewport */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover; /* Cover the entire area */
+    }
+
+    .header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 90px; /* Increase height */
+      background-color: black;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .logo {
+      width: 70px; /* Decrease width */
+      height: auto;
+      cursor: pointer;
+      margin-left: auto; /* Push logo to the right edge */
+      border-radius: 50%; /* Make the logo circular */
+    }
+
+    .header-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 24px; /* Adjust font size as needed */
+      font-weight: bold;
+    }
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+    }
+
+    .info-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: black;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      opacity: 0.8;
+      width: 300px;
+    }
+
+    .info-title {
+      color: yellow; /* Only set the color to yellow */
+      margin-bottom: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+
+    .info-box a {
+      color: white; /* Make the link white */
+      text-decoration: none; /* Remove default underline */
+      /* Add any additional styling for the link if needed */
+    }
+
+    .info-box a:hover {
+      text-decoration: underline; /* Underline on hover */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="background"></div> <script>
+      // Array of image file names
+      const imageFiles = ['fon1.jpg', 'fon2.jpg', 'fon3.jpg', 'fon4.jpg', 'fon5.jpg'];
+
+      // Get a random image file name
+      const randomImageIndex = Math.floor(Math.random() * imageFiles.length);
+      const randomImage = imageFiles[randomImageIndex];
+
+      // Set the background image dynamically
+      const backgroundElement = document.querySelector('.background');
+      backgroundElement.style.backgroundImage = `url(${randomImage})`;
+    </script>
+
+    <div class="header">
+      <a href="https://t.me/hardward_store" target="_blank">
+        <img src="logo.jpg" alt="Logo" class="logo">
+      </a>
+      <div class="header-text">Hardward Store</div> </div>
+
+    <div class="info-box">
+      <div class="info-title">Информация</div>
+      <p>Магазин - <a href="https://t.me/hardward_store" target="_blank">Hardward Store</a></p>
+      <p>Владельцы - <a href="https://t.me/renedeath" target="_blank">@renedeath</a> | <a href="https://t.me/avangardev" target="_blank">@avangardev</a></p>
+      <p>Наш чат - <a href="https://t.me/hardward_chat" target="_blank">Hardward Chat</a></p>
+      <p>Отзывы - <a href="https://t.me/hardwardreviews" target="_blank">Hardward Reviews</a></p>
+    </div>
+
+  </div>
+</body>
+</html>
